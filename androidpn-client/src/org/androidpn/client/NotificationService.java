@@ -129,6 +129,7 @@ public class NotificationService extends Service {
     @Override
     public void onDestroy() {
         Log.d(LOGTAG, "onDestroy()...");
+        System.out.println("NotificationService --> stop");
         stop();
     }
 
