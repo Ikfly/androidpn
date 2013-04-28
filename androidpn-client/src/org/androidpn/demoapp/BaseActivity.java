@@ -44,7 +44,6 @@ public class BaseActivity extends Activity {
 			AlertDialog.Builder exitBuilder = new AlertDialog.Builder(this);
 			exitBuilder.setTitle(R.string.exit_doult_title);
 			exitBuilder.setMessage(R.string.exit_doult_message);
-			exitBuilder.setPositiveButton(R.string.cancel, null);
 			exitBuilder.setNegativeButton(R.string.exit, new OnClickListener(){
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
@@ -53,6 +52,7 @@ public class BaseActivity extends Activity {
 					finish();
 				}
 			});
+			exitBuilder.setPositiveButton(R.string.cancel, null);
 			exitBuilder.show();
 			break;
 		}

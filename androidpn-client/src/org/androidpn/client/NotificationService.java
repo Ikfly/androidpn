@@ -204,7 +204,7 @@ public class NotificationService extends Service {
         registerReceiver(notificationReceiver, filter);
     }
 
-    private void unregisterNotificationReceiver() {
+    public void unregisterNotificationReceiver() {
         unregisterReceiver(notificationReceiver);
     }
 
@@ -218,7 +218,7 @@ public class NotificationService extends Service {
         registerReceiver(connectivityReceiver, filter);
     }
 
-    private void unregisterConnectivityReceiver() {
+    public void unregisterConnectivityReceiver() {
         Log.d(LOGTAG, "unregisterConnectivityReceiver()...");
         telephonyManager.listen(phoneStateListener,
                 PhoneStateListener.LISTEN_NONE);
@@ -241,6 +241,8 @@ public class NotificationService extends Service {
         xmppManager.disconnect();
         executorService.shutdown();
     }
+    
+    
 
     /**
      * Class for summiting a new runnable task.

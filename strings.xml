@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">预警客户端</string>
+    <string name="index">此应用用于接收公司服务器
+            以及服务故障报警信息</string>
+    <string name="settings">设置</string>
+    <string name="exit">退出</string>
+    <string name="exit_doult_title">退出？</string>
+    <string name="exit_doult_message">退出应用将接收不到预警消息！</string>
+    <string name="cancel">取消</string>
+    <string name="attention">注意</string>
+    <string name="netwrok_not_avaliable">网络不可用</string>
+    
+    <string name="notification_doult">允许接收推送消息</string>
+    <string name="notification_enable">启用</string>
+    <string name="notification_disable">禁用</string>
+    
+    <string name="notification_sound">声音</string>
+    <string name="notification_sound_description">声音提醒</string>
+    
+    <string name="notification_vibrate">震动</string>
+    <string name="notification_vibrate_description">震动提醒</string>
+</resources>

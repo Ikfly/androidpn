@@ -82,7 +82,7 @@ public class XmppManager {
 
     private Future<?> futureTask;
 
-    private Thread reconnection;
+    private ReconnectionThread reconnection;
 
     public XmppManager(NotificationService notificationService) {
         context = notificationService;
@@ -320,6 +320,7 @@ public class XmppManager {
             } else {
                 Log.i(LOGTAG, "XMPP connected already");
                 xmppManager.runTask();
+                reconnection.setWaiting(0);
             }
         }
     }

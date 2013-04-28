@@ -17,11 +17,13 @@ package org.androidpn.demoapp;
 
 import org.androidpn.client.ServiceManager;
 
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
 /**
  * This is an androidpn client demo application.
@@ -29,6 +31,8 @@ import android.widget.Button;
  * @author Sehwan Noh (devnoh@gmail.com)
  */
 public class DemoAppActivity extends BaseActivity {
+	
+	
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,11 +41,14 @@ public class DemoAppActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-     // Start the service
-        ServiceManager serviceManager = new ServiceManager(this);
-        serviceManager.setNotificationIcon(R.drawable.notification);
-        serviceManager.startService();
+        startService();
+    }
 
+	// Start the service
+    private void startService(){
+    	 ServiceManager serviceManager = new ServiceManager(this);
+         serviceManager.setNotificationIcon(R.drawable.notification);
+         serviceManager.startService();
     }
 
 }

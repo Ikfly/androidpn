@@ -30,6 +30,11 @@ public class ReconnectionThread extends Thread {
     private final XmppManager xmppManager;
 
     private int waiting;
+    
+	public void setWaiting(int waiting) {
+		this.waiting = waiting;
+	}
+
 
     ReconnectionThread(XmppManager xmppManager) {
         this.xmppManager = xmppManager;
@@ -43,6 +48,7 @@ public class ReconnectionThread extends Thread {
                         + " seconds");
                 Thread.sleep((long) waiting() * 1000L);
                 xmppManager.connect();
+                
                 waiting++;
             }
         } catch (final InterruptedException e) {
@@ -53,9 +59,10 @@ public class ReconnectionThread extends Thread {
             });
         }
     }
+    
 
     private int waiting() {
-        if (waiting > 20) {
+    	if (waiting > 20) {
             return 600;
         }
         if (waiting > 13) {

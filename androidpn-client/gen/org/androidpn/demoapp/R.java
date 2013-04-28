@@ -11,7 +11,7 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int ic_launcher=0x7f020000;
         public static final int notification=0x7f020001;
     }
     public static final class id {
@@ -29,11 +29,20 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
+        public static final int attention=0x7f050007;
         public static final int cancel=0x7f050006;
         public static final int exit=0x7f050003;
         public static final int exit_doult_message=0x7f050005;
         public static final int exit_doult_title=0x7f050004;
-        public static final int hello=0x7f050001;
+        public static final int index=0x7f050001;
+        public static final int netwrok_not_avaliable=0x7f050008;
+        public static final int notification_disable=0x7f05000b;
+        public static final int notification_doult=0x7f050009;
+        public static final int notification_enable=0x7f05000a;
+        public static final int notification_sound=0x7f05000c;
+        public static final int notification_sound_description=0x7f05000d;
+        public static final int notification_vibrate=0x7f05000e;
+        public static final int notification_vibrate_description=0x7f05000f;
         public static final int settings=0x7f050002;
     }
 }
